@@ -1,0 +1,35 @@
+.wrapper{
+    padding-left: 150px;
+}
+.cloud{
+    border-radius: 10px;
+    height: auto;
+    max-width: 400px;
+    padding: 20px;
+    position: relative;
+    background-color: white;
+    color: black;
+}
+.name{
+    color: green;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+.before{
+
+}
+.after{
+    border: 15px solid transparent;
+    border-bottom-color: white;
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    content: '';
+}
+.message{
+
+}
+.time{
+
+}
