@@ -2,9 +2,10 @@
     padding-left: 140px;
 }
 .cloud{
+    margin: 0 auto;
     border-radius: 10px;
     height: auto;
-    max-width:600px;
+    max-width:150px;
     padding: 20px;
     position: relative;
     background-color: white;
