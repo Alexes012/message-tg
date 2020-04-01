@@ -14,7 +14,7 @@ const Quality = (props) => {
     ];
 
     let QualityElements = QualityData
-        .map((quality, i) =>
+        .map ((quality, i) =>
             <span className={i === 1 ? s.yo : s.yoyo}>
                 <QualityItem qualitys={quality.quality}/>
             </span>);

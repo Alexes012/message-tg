@@ -1,49 +1,13 @@
-.wrapper{
-    padding-left: 140px;
+.All {
+    text-align: center;
+    padding-top: 100px;
 }
-.cloud{
-    margin: 0 auto;
-    border-radius: 10px;
-    height: auto;
-    max-width:150px;
-    padding: 20px;
-    position: relative;
-    background-color: white;
-    color: black;
-}
-.name{
-    color: #b600ef;
-    font-weight: 800;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 20px;
-}
-.before{
-    width: 100px;
-    height: 100px;
-    border-radius: 60%;
-    position: absolute;
-    bottom: 0;
-    background-image: url("https://www.eurohomespb.ru/assets/files/images/muzhchina-14-min.png");
-    background-size: 100% 100%;
-    left: -140px;
 
+.Span {
+    color: #faf96c;
+    font-size: 20px;
+}
 
-}
-.after{
-    border: 20px solid transparent;
-    border-bottom-color: white;
-    position: absolute;
-    bottom: 0;
-    left: -20px;
-
-}
-.message{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-}
-.time{
-    color: #cecfef;
-    font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: right;
+.error {
+    border-color: red;
 }

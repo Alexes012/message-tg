@@ -1,57 +1,28 @@
-import p from "./hometask3.module.css";
+import './Input.css'
+import '../../App.css'
 import React from "react";
 
-class HomeTask3 extends React.Component {
-    newRef = React.createRef();
+class Input extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: '',
-            count: 6
-        };
-        this.handleClick = this.handleClick.bind(this)
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
+    render (props) {
 
-    handleClick() {
-        this.setState(prevState => {
-            return {
-                count: prevState.count + 1
-            }
-        });
-        this.newRef.current.value = "";
-    }
-
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
-
-    handleSubmit(event) {
-        alert('Привествую вас ' + this.state.value);
-        event.preventDefault();
-    }
-
-    render() {
         return (
-            <div className={p.All}>
-                <form onSubmit={this.handleSubmit}>
-                    <div className={p.Span}>
-                        <span>{this.state.count}</span>
-                    </div>
-                    <input
-                        type="text"
-                        value={this.state.value}
-                        onChange={this.handleChange}
-                        ref={this.newRef}
-                    />
-                    <button type="submit" onClick={this.handleClick}>CLICK</button>
-                </form>
-            </div>
-
-        );
+            <input
+                type="text"
+                placeholder={"Write Name"}
+                className={this.props.state.error ? "error" : ""}
+                value={this.props.state.value}
+                onChange={this.props.handleChange}
+                onKeyPress={this.props.onKeyPress}
+            />
+        )
     }
 }
+export default Input;
 
-export default HomeTask3;
+
+
+
+
+
+

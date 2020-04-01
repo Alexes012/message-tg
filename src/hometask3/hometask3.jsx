@@ -1,27 +1,67 @@
-import p from "./Message.module.css";
-import "./Message.module.css"
+import p from "./hometask3.module.css";
 import React from "react";
+import Input from "./Input/Input";
+import Button from "./Button/Button";
 
+class HomeTask3 extends React.Component {
 
-const Message = () => {
-    return <div className={p.wrapper}>
-        <div className={p.cloud}>
-            <div className={p.name}>
-                Alex Shkut
-            </div>
-            <div className={p.before}>
-            </div>
-            <div className={p.after}>
+    state = {
+        value: '',
+        count: 6,
+        error: false,
+        names: [{title: "Lexa"}]
+    };
 
-            </div>
-            <div className={p.message}>
-                Hello! I am the best react developer. I don’t know what else to write.
-            </div>
-            <div className={p.time}>
-                7:20 PM
-            </div>
-        </div>
-    </div>
-};
+    handleChange = (event) => {
+        this.setState({
+            error: false,
+            value: event.target.value
+        });
+    };
 
-export default Message;
+    handleSubmit = () => {
+        let newName = this.state.value;
+        if (newName === "") {
+            this.setState({error: true})
+        } else {
+            alert('Приветсвую вас ' + newName);
+            this.setState({
+                error: false,
+                value: '',
+                count: this.state.count + 1,
+                names: [...this.state.names, {title: newName}]
+            })
+        }
+    };
+    onKeyPress = (e) => {
+        if (e.key === "Enter") {
+            this.handleSubmit()
+        }
+    };
+
+    render = () => {
+
+        let names = this.state.names.map((name) => {
+            return <div>{name.title}</div>
+        });
+
+        return (
+            <div className={p.All}>
+                <div className={p.Span}>
+                    <span>{this.state.count}</span>
+                </div>
+                <Input
+                    state={this.state}
+                    handleChange={this.handleChange}
+                    onKeyPress={this.onKeyPress}
+                />
+                <Button
+                    handleSubmit={this.handleSubmit}
+                />
+                <div>{names}</div>
+            </div>
+        );
+    }
+}
+
+export default HomeTask3;

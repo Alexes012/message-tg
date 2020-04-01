@@ -3,3 +3,7 @@ body {
     color: #e6e8ed;
     margin-top: 50px;
 }
+
+.error {
+    border-color: red;
+}
